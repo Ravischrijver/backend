@@ -80,7 +80,7 @@ app.post("/api/chat/:id/message", async (req, res) => {
           "Authorization": `Bearer ${process.env.GROQ_API_KEY}`
         },
         body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
+          model: "llama-3.1-70b-versatile",
           messages: [
             { role: "system", content: "Je bent Barry AI, een slimme assistent met humor." },
             ...chat.messages.map(m => ({ role: m.role, content: m.text }))
